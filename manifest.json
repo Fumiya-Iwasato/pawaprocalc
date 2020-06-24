@@ -1,0 +1,17 @@
+{
+  "name":"パワプロアプリ査定計算",
+  "short_name":"パワプロ査定",
+  "icons": [{
+      "src": "image/top192.jpeg",
+      "sizes":"192x192",
+      "type": "image/png"
+    }, {
+      "src": "image/top512.jpeg",
+      "sizes":"512x512",
+      "type": "image/png"
+    }],
+  "start_url": "https://pawapro-calc.herokuapp.com/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF"
+}

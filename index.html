@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>パワプロアプリ野手査定</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/fielders.js" defer></script>
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="image/ball.ico">
+        <link href="css/app.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <!-- PWA -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="パワプロ査定">
+        <link rel="apple-touch-icon" href="image/top.jpeg">
+        <link rel="manifest" href="js/manifest.json">
+        <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('js/sw.js')
+                .then((reg) => {
+                console.log('Service worker registered.', reg);
+                });
+        }
+        </script>
+        <!-- nend広告 -->
+        <script type="text/javascript">
+        var nend_params = {"media":66530,"site":339704,"spot":1005288,"type":2,"oriented":1};
+        </script>
+        <script type="text/javascript" src="https://js1.nend.net/js/nendAdLoader.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+            <div class="container">
+              <div class="navbar-brand"><img src="image/top.jpeg" class="nav-image">パワプロアプリ査定計算</div>
+              <div class="collapse navbar-collapse">
+              </div>
+            </div>
+          </nav>
+          <div class="container">
+                <div class="row">
+                  <div class="col-md-2">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="container text-center">
+                        <div class="row assess-group">
+                            <div class="col-md-12">
+                                <div class="sougou">★★ 総合評価 ★★</div>
+                                <div id="rank" class="total-rank">F</div>
+                                <div id="totalAssess" class="total-assess">0</div>
+                                <div id="assessAim" class="assess-aim"><span class="aim-yellow">▶︎▶︎▶︎</span><span class="aim-gray">▶︎▶︎▶︎▶︎▶︎▶︎</span></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button id="reset" type="submit" class="btn-reset">リセット</button>
+                            </div>
+                        </div>
+                        <div class="row ability-group">
+                            <div class="col-md-12">
+                                <table>
+                                    <tr>
+                                        <th><img src="image/ballistic.jpeg"></th>
+                                        <th><img src="image/meet.jpeg"></th>
+                                        <th><img src="image/power.jpeg"></th>
+                                        <th><img src="image/run.jpeg"></th>
+                                        <th><img src="image/arm.jpeg"></th>
+                                        <th><img src="image/defense.jpeg"></th>
+                                        <th><img src="image/catch.jpeg"></th>
+                                    </tr>
+                                    <tr>
+                                        <td><img id="ballisticLevel" src="image/2.jpeg"></td>
+                                        <td><img id="meetLevel" class="basisImg" src="image/e.jpeg"></td>
+                                        <td><img id="powerLevel" class="basisImg" src="image/e.jpeg"></td>
+                                        <td><img id="runLevel" class="basisImg" src="image/e.jpeg"></td>
+                                        <td><img id="armLevel" class="basisImg" src="image/e.jpeg"></td>
+                                        <td><img id="defenseLevel" class="basisImg" src="image/e.jpeg"></td>
+                                        <td><img id="catchLevel" class="basisImg" src="image/e.jpeg"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select id="ballisticValue" class="ballistic-value" name="ballisticValue">
+                                                <option value="2" selected>2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select id="meetValue" class="basisValue" name="meetValue">
+                                                <option value="40" selected>40</option>
+                                                <option value="42">42</option>
+                                                <option value="46">46</option>
+                                                <option value="50">50</option>
+                                                <option value="54">54</option>
+                                                <option value="58">58</option>
+                                                <option value="60">60</option>
+                                                <option value="62">62</option>
+                                                <option value="66">66</option>
+                                                <option value="70">70</option>
+                                                <option value="74">74</option>
+                                                <option value="78">78</option>
+                                                <option value="80">80</option>
+                                                <option value="82">82</option>
+                                                <option value="86">86</option>
+                                                <option value="90">90</option>
+                                                <option value="94">94</option>
+                                                <option value="98">98</option>
+                                                <option value="101">101</option>
+                                                <option value="102">102</option>
+                                                <option value="106">106</option>
+                                                <option value="110">110</option>
+                                                <option value="111">111</option>
+                                                <option value="114">114</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select id="powerValue" class="basisValue" name="powerValue">
+                                                <option value="40" selected>40</option>
+                                                <option value="41">41</option>
+                                                <option value="44">44</option>
+                                                <option value="47">47</option>
+                                                <option value="50">50</option>
+                                                <option value="53">53</option>
+                                                <option value="56">56</option>
+                                                <option value="59">59</option>
+                                                <option value="60">60</option>
+                                                <option value="62">62</option>
+                                                <option value="65">65</option>
+                                                <option value="68">68</option>
+                                                <option value="70">70</option>
+                                                <option value="71">71</option>
+                                                <option value="74">74</option>
+                                                <option value="77">77</option>
+                                                <option value="80">80</option>
+                                                <option value="83">83</option>
+                                                <option value="86">86</option>
+                                                <option value="89">89</option>
+                                                <option value="90">90</option>
+                                                <option value="92">92</option>
+                                                <option value="95">95</option>
+                                                <option value="98">98</option>
+                                                <option value="101">101</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select id="runValue" class="basisValue" name="runValue">
+                                                <option value="40" selected>40</option>
+                                                <option value="45">45</option>
+                                                <option value="55">55</option>
+                                                <option value="60">60</option>
+                                                <option value="65">65</option>
+                                                <option value="70">70</option>
+                                                <option value="75">75</option>
+                                                <option value="80">80</option>
+                                                <option value="85">85</option>
+                                                <option value="90">90</option>
+                                                <option value="95">95</option>
+                                                <option value="101">101</option>
+                                                <option value="105">105</option>
+                                                <option value="106">106</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select id="armValue" class="basisValue" name="armValue">
+                                                <option value="40" selected>40</option>
+                                                <option value="45">45</option>
+                                                <option value="55">55</option>
+                                                <option value="60">60</option>
+                                                <option value="65">65</option>
+                                                <option value="70">70</option>
+                                                <option value="75">75</option>
+                                                <option value="80">80</option>
+                                                <option value="85">85</option>
+                                                <option value="90">90</option>
+                                                <option value="95">95</option>
+                                                <option value="101">101</option>
+                                                <option value="105">105</option>
+                                                <option value="106">106</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select id="defenseValue" class="basisValue" name="defenseValue">
+                                                <option value="40" selected>40</option>
+                                                <option value="45">45</option>
+                                                <option value="55">55</option>
+                                                <option value="60">60</option>
+                                                <option value="65">65</option>
+                                                <option value="70">70</option>
+                                                <option value="75">75</option>
+                                                <option value="80">80</option>
+                                                <option value="85">85</option>
+                                                <option value="90">90</option>
+                                                <option value="95">95</option>
+                                                <option value="101">101</option>
+                                                <option value="105">105</option>
+                                                <option value="106">106</option>
+                                                <option value="111">111</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select id="catchValue" class="basisValue" name="catchValue">
+                                                <option value="40" selected>40</option>
+                                                <option value="45">45</option>
+                                                <option value="55">55</option>
+                                                <option value="65">65</option>
+                                                <option value="75">75</option>
+                                                <option value="85">85</option>
+                                                <option value="95">95</option>
+                                                <option value="101">101</option>
+                                                <option value="105">105</option>
+                                                <option value="106">106</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row spability-group">
+                            <div class="spability-title">野手能力</div>
+                            <div id="spability-area" class="col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loader_wrap">
+                        <div class="loader">Loading...</div>
+                    </div>
+                    @endsection
+                  </div>
+                  <div class="col-md-2">
+                  </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
