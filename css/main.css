@@ -1,6 +1,14 @@
 body {
+  padding-top: 60px;
   padding-bottom: 80px;
   background-color: #53b7f1;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
 .nav-image {
@@ -18,7 +26,7 @@ body {
   background-color: #fff;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 54px;
   z-index: 10;
 }
 

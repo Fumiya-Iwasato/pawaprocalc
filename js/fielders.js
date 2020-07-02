@@ -36,7 +36,44 @@ $(function () {
     var totalVal = beforeTotal * 14;
     $('#totalAssess').text(totalVal); //ランクの表示
 
-    var rank = ['<div style="color:rgb(14, 10, 230);">F</div>', '<div style="color:rgb(61, 158, 90);">E</div>', '<div style="color:rgb(252, 208, 15);">D</div>', '<div style="color:rgb(245, 145, 31);">C</div>', '<div style="color:rgb(245, 63, 31);">B</div>', '<div style="color:rgb(247, 28, 148);">A</div>', '<div style="color:rgb(252, 248, 8);">S</div>', '<div style="color:rgb(252, 248, 8);">S<span class="small">1</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="small">2</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="small">3</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="small">4</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="small">5</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="small">6</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="small">7</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="small">8</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="small">9</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">1</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">2</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">3</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">4</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">5</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">6</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">7</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">8</span></div>', '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">9</span></div>', '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span></div>', '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">1</span></div>', '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">2</span></div>', '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">3</span></div>', '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">4</span></div>', '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">5</span></div>', '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">6</span></div>', '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">7</span></div>', '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">8</span></div>', '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">9</span></div>'];
+    var rank = [
+      '<div style="color:rgb(14, 10, 230);">F</div>', 
+      '<div style="color:rgb(61, 158, 90);">E</div>', 
+      '<div style="color:rgb(252, 208, 15);">D</div>', 
+      '<div style="color:rgb(245, 145, 31);">C</div>', 
+      '<div style="color:rgb(245, 63, 31);">B</div>', 
+      '<div style="color:rgb(247, 28, 148);">A</div>', 
+      '<div style="color:rgb(252, 248, 8);">S</div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="small">1</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="small">2</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="small">3</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="small">4</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="small">5</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="small">6</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="small">7</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="small">8</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="small">9</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">1</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">2</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">3</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">4</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">5</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">6</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">7</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">8</span></div>', 
+      '<div style="color:rgb(252, 248, 8);">S<span class="ss">S</span><span class="small">9</span></div>', 
+      '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span></div>', 
+      '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">1</span></div>', 
+      '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">2</span></div>', 
+      '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">3</span></div>', 
+      '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">4</span></div>', 
+      '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">5</span></div>', 
+      '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">6</span></div>', 
+      '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">7</span></div>', 
+      '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">8</span></div>', 
+      '<div style="color:rgb(246, 180, 252);">P<span class="small-g">G</span><span class="small-number">9</span></div>'
+    ];
     $('#rank').html(rank[Math.floor((totalVal + 42) / 140)]); //次の査定まで
 
     var num = Math.floor((totalVal + 42) / 14);
