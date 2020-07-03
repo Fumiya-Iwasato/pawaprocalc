@@ -208,8 +208,13 @@ $(function () {
         ballisticAssess = 4704;
         break;
     }
-    var ability = ['', '', 'image/2.jpeg', 'image/3.jpeg', 'image/4.jpeg'];
-    $('#ballisticLevel').attr('src', ability[val]);
+    var ability = [
+      '', 
+      '', 
+      '<div id="ballisticLevel" class="ballisticImage">⬆︎</div>', 
+      '<div id="ballisticLevel" class="ballisticImage-3">⬆︎</div>', 
+      '<div id="ballisticLevel" class="ballisticImage-4">⬆︎</div>'];
+    $('#ballisticLevel').html(ability[val]);
     calcAssess();
   }; 
 
