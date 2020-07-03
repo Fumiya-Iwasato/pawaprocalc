@@ -38,7 +38,7 @@ $(function () {
 
     //ランクの表示
     var rank = [
-      '<div style="color:rgb(14, 10, 230);">F</div>', 
+      '<div class="total-rank">F</div>', 
       '<div class="rank-e">E</div>', 
       '<div class="rank-d">D</div>', 
       '<div class="rank-c">C</div>', 
@@ -176,10 +176,10 @@ $(function () {
 
   //リセット
   $('#reset').click(function () {
-    $('#rank').text('F');
+    $('#rank').html('<div class="total-rank">F</div>');
     $('#totalAssess').text(0);
     $('#assessAim').html('<span class="aim-yellow">▶︎▶︎▶︎</span><span class="aim-gray">▶︎▶︎▶︎▶︎▶︎▶︎</span>');
-    $('#ballisticLevel').html('<div id="ballisticLevel" class="ballisticImage">⬆︎</div>');
+    $('#ballisticLevel').html('<div class="ballisticImage" style="transform: rotate(5deg)">⬆︎</div>');
     $('.basisLevel').html('<div class="rank-e">E</div>');
     $('#ballisticValue').val('2');
     $('.basisValue').val('40');
@@ -211,9 +211,10 @@ $(function () {
     var ability = [
       '', 
       '', 
-      '<div id="ballisticLevel" class="ballisticImage">⬆︎</div>', 
+      '<div id="ballisticLevel" class="ballisticImage" style="transform: rotate(5deg)">⬆︎</div>', 
       '<div id="ballisticLevel" class="ballisticImage-3">⬆︎</div>', 
-      '<div id="ballisticLevel" class="ballisticImage-4">⬆︎</div>'];
+      '<div id="ballisticLevel" class="ballisticImage-4">⬆︎</div>'
+    ];
     $('#ballisticLevel').html(ability[val]);
     calcAssess();
   }; 
