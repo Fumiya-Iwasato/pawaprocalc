@@ -179,8 +179,8 @@ $(function () {
     $('#rank').text('F');
     $('#totalAssess').text(0);
     $('#assessAim').html('<span class="aim-yellow">▶︎▶︎▶︎</span><span class="aim-gray">▶︎▶︎▶︎▶︎▶︎▶︎</span>');
-    $('#ballisticLevel').attr('src', 'image/2.jpeg');
-    $('.basisImg').attr('src', 'image/e.jpeg');
+    $('#ballisticLevel').html('<div id="ballisticLevel" class="ballisticImage">⬆︎</div>');
+    $('.basisLevel').html('<div class="rank-e">E</div>');
     $('#ballisticValue').val('2');
     $('.basisValue').val('40');
     $('#spability-area .btn').addClass('disabled');
