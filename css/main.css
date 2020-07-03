@@ -10,7 +10,6 @@ body {
   top: 0;
   z-index: 10;
 }
-
 .nav-image {
   width: 23px;
   height: 23px;
@@ -85,7 +84,6 @@ body {
 	background: repeating-linear-gradient(0deg, #f3e302 0.1em, #dac508 0.2em, #FEE9A0 0.3em, #ffd013 0.4em, #ffe604 0.5em); 
 	-webkit-background-clip: text;
 }
-
 .small {
   background: repeating-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255)); 
 	-webkit-background-clip: text;
@@ -93,26 +91,22 @@ body {
   font-weight: 900;
   margin-left: -12px;
 }
-
 .ss {
   background: repeating-linear-gradient(0deg, #f3e302 0.1em, #dac508 0.2em, #FEE9A0 0.3em, #ffd013 0.4em, #ffe604 0.5em); 
 	-webkit-background-clip: text;
   font-size: 50px;
   margin-left: -10px;
 }
-
 .rank-pg {
   background: repeating-linear-gradient(-45deg, #e590ff 0.1em, #f2ddf6 0.2em, #dd84f8 0.3em, #ed6ef8 0.4em, #f5b8fd 0.5em); 
 	-webkit-background-clip: text;
 }
-
 .small-g {
   background: repeating-linear-gradient(-45deg, #8f8f8f 0.1em, #b8b8b8 0.2em, #E8E8E8 0.3em, #b6b6b6 0.4em, #9e9e9e 0.5em); 
 	-webkit-background-clip: text;
   font-size: 30px;
   margin-left: -12px;
 }
-
 .small-number {
   background: repeating-linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255)); 
 	-webkit-background-clip: text;
@@ -129,13 +123,16 @@ body {
 }
 
 .assess-aim {
-  color: #fcf808;
+  background: linear-gradient(rgb(248, 240, 126), #ddda1c); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 18px;
   -webkit-text-stroke: 0.3px #000;
 }
-
 .aim-gray {
-  color: #a5a4a4;
+  background: linear-gradient(rgb(230, 228, 228), #9c9c9c); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btn-reset {
@@ -146,13 +143,29 @@ body {
   border-radius: 5px;
   margin-top: 10px;
 }
-
 .btn-reset:hover {
   cursor: pointer;
 }
-
 .btn-reset:focus {
   outline: 0;
+}
+
+.basisLevel {
+  background: -webkit-linear-gradient(rgb(156, 248, 182), rgb(15, 207, 73), rgb(17, 97, 41));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+.basis-s {
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+.small-2 {
+  font-size: 18px;
+  margin-left: -7px;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
 .ability-group {
@@ -165,7 +178,6 @@ table {
   margin: 10px auto;
   border-radius: 5px;
 }
-
 table img {
   width: 40px;
   height: 40px;
@@ -176,8 +188,7 @@ table img {
   border-radius: 10px;
   background-color: #05055c;
 }
-
-.spability-group .spability-title {
+.spability-title {
   color: white;
   font-size: 15px;
   font-weight: bold;
@@ -198,19 +209,16 @@ table img {
   white-space: nowrap;
   padding: 0;
 }
-
 .btn:focus {
   color: #011ec0;
   background: linear-gradient(#98e7fb, #00ccff);
   border-color: #00ccff;
 }
-
 .btn-primary.disabled {
   color: #011ec0;
   background: linear-gradient(#98e7fb, #00ccff);
   border-color: #00ccff;
 }
-
 .btn.disabled {
   opacity: 0.55;
 }
@@ -220,18 +228,15 @@ table img {
   background: linear-gradient(#feb, #d1ce08);
   border-color: #d1ce08;
 }
-
 .btn-primary.rainbow-ability {
   color: #612401;
   background: linear-gradient(45deg, #fa5757, #ffb938, #fdfd62, #5dff5d, #4ff5f5, #3d3df8, #fd59fd);
   border-color: linear-gradient(45deg, #fa5757, #ffb938, #fdfd62, #5dff5d, #4ff5f5, #3d3df8, #fd59fd);
 }
-
 .btn-primary.blue-red-ability {
   color: #011ec0;
   background: linear-gradient(90deg, #a2e3f3 0%, #00ccff 50%, #ee7474 50%, #f8a8a8 100%);
 }
-
 .btn-primary.green-ability {
   color: #004406;
   background: linear-gradient(#affaaf, #68e668);
@@ -246,18 +251,15 @@ table img {
   right: 0;
   background: rgba(0, 0, 0, 0.4);
 }
-
 .loader_wrap.hide {
   display: none;
 }
-
 .loader,
 .loader:after {
   border-radius: 50%;
   width: 10em;
   height: 10em;
 }
-
 .loader {
   position: absolute;
   top: 30vh;
@@ -273,22 +275,18 @@ table img {
   -webkit-animation: load8 1.1s infinite linear;
   animation: load8 1.1s infinite linear;
 }
-
 @-webkit-keyframes load8 {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
-
 @keyframes load8 {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
@@ -298,11 +296,9 @@ table img {
   .ability-group .col-md-12 {
     padding: 0;
   }
-
   .ballistic-value {
     width: 30px;
   }
-
   .basisValue {
     width: 38px;
   }
@@ -312,11 +308,9 @@ table img {
   .ability-group .col-md-12 {
     padding: 0;
   }
-
   .ballistic-value {
     width: 35px;
   }
-
   .basisValue {
     width: 42px;
   }
@@ -329,14 +323,11 @@ table img {
     appearance: none;
     background-color: #fff;
   }
-
   .btn-primary {
     font-size: 11px;
     width: 30%;
   }
-
   .ability-group .col-md-12 {
     padding: 0;
   }
 }
-
