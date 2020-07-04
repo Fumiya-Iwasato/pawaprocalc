@@ -151,24 +151,26 @@ body {
 }
 
 .ballisticImage {
-  background: -webkit-linear-gradient(rgb(255, 223, 187), rgb(245, 145, 31), rgb(223, 121, 4));
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px rgb(255, 255, 255);
   font-size: 30px;
   font-family: sans-serif;
   font-weight: 900;
-  transform: rotate(70deg);
+}
+.ballisticImage-2 {
+  background: -webkit-linear-gradient(rgb(255, 223, 187), rgb(245, 145, 31), rgb(223, 121, 4));
+  -webkit-background-clip: text;
+  transform: rotate(-10deg);
 }
 .ballisticImage-3 {
   background: -webkit-linear-gradient(rgb(248, 196, 187), rgb(253, 87, 58), rgb(224, 35, 2));
   -webkit-background-clip: text;
-  transform: rotate(-20deg);
+  transform: rotate(-30deg);
 }
 .ballisticImage-4 {
   background: -webkit-linear-gradient(rgb(255, 204, 232), rgb(251, 65, 168), rgb(248, 4, 138));
   -webkit-background-clip: text;
-  transform: rotate(-40deg);
+  transform: rotate(-65deg);
 }
 
 .basisLevel {
