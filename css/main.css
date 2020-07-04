@@ -123,7 +123,7 @@ body {
 }
 
 .assess-aim {
-  background: linear-gradient(rgb(248, 240, 126), #ddda1c); 
+  background: linear-gradient(rgb(246, 245, 233), #f1ef83, #c5c205); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 18px;
