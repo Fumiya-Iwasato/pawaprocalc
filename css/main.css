@@ -177,7 +177,7 @@ body {
   background: -webkit-linear-gradient(rgb(156, 248, 182), rgb(15, 207, 73), rgb(17, 97, 41));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.7px rgb(255, 255, 255);
   font-size: 30px;
   font-family: sans-serif;
   font-weight: 900;

@@ -8,7 +8,7 @@ var defenseAssess = 0;
 var catchAssess = 0;
 var spAbilityAssess = 0;
 var fieldersSkills = new Map();
-var url = "https://script.google.com/macros/s/AKfycbzSJ55HmqfBHo4_v-ePt_cn9P_NsW4r36wsB89ytxLoPd_zIpU/exec";
+var url = "https://script.google.com/macros/s/AKfycbygqHyzxxGmjE7QHfAny3kat6Tv4Hh_A-ysCkN4nQEcBQOa_IYl/exec";
 
 $(function () {
   //サニタイジング
